@@ -1,7 +1,6 @@
 
 const lib = {
-  utils: require('./lib/utils'),
-  middleware: require('./lib/middleware/middleware')
+  utils: require('./lib/utils')
 };
 
 module.exports = lib;

@@ -38,3 +38,33 @@ describe('toSnakeCase()', function () {
     expect(result).to.eql(fixture.toSnakeCase.obj5.expected);
   });
 });
+
+describe('sendReply()', function () {
+  it('Should send reply with snakeCase body', function (done) {
+    var res = {};
+    res.status = function (status) {
+      res.st = status;
+      return res;
+    };
+    res.json = function (obj) {
+      expect(obj).to.eql(fixture.toSnakeCase.obj4.expected);
+      expect(res.st).to.equal(200);
+      done();
+    };
+    httpCommon.utils.sendReply(res, 200, fixture.toSnakeCase.obj4.value);
+  });
+
+  it('Should send reply with empty body when no passing body parameter', function (done) {
+    var res = {};
+    res.status = function (status) {
+      res.st = status;
+      return res;
+    };
+    res.json = function (obj) {
+      expect(obj).to.equal('');
+      expect(res.st).to.equal(200);
+      done();
+    };
+    httpCommon.utils.sendReply(res, 200);
+  });
+});
