@@ -67,4 +67,21 @@ describe('sendReply()', function () {
     };
     httpCommon.utils.sendReply(res, 200);
   });
+
+  it('Should send reply with error information', function (done) {
+    var res = {};
+    res.status = function (status) {
+      res.st = status;
+      return res;
+    };
+    res.json = function (obj) {
+      expect(obj).to.not.be.undefined;
+      expect(obj.code).to.equal(1);
+      expect(obj.sub_code).to.be.undefined;
+      expect(obj.message).to.equal('Invalid request');
+      expect(res.st).to.equal(400);
+      done();
+    };
+    httpCommon.utils.sendReply(res, httpCommon.error.invalidRequestError());
+  });
 });
