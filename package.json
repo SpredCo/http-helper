@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preversion": "gulp lint && npm test",
+    "version": "gulp changelog && git add CHANGELOG.md",
     "test": "istanbul cover _mocha -- test/test.js -R spec"
   },
   "repository": {
