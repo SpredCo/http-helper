@@ -1,0 +1,133 @@
+{
+  "toSnakeCase": {
+    "obj1": {
+      "value": {
+        "MyNameIs": "Maxime Guedj",
+        "pluginName": "httpCommon",
+        "finalTest": "lol"
+      },
+      "expected": {
+        "my_name_is": "Maxime Guedj",
+        "plugin_name": "httpCommon",
+        "final_test": "lol"
+      }
+    },
+    "obj2": {
+      "value": {
+        "MyNameIs": "Maxime Guedj",
+        "MyArray": [
+          {
+            "finalTest": "lol",
+            "reTest": "hh"
+          },
+          {
+            "finalTest": "lol",
+            "reTest": "hh"
+          }]
+      },
+      "expected": {
+        "my_name_is": "Maxime Guedj",
+        "my_array": [
+          {
+            "final_test": "lol",
+            "re_test": "hh"
+          },
+          {
+            "final_test": "lol",
+            "re_test": "hh"
+          }
+        ]
+      }
+    },
+    "obj3": {
+      "value": {
+        "AgainMe": "Ok",
+        "stringArray": [
+          "Hello",
+          "My",
+          "Name",
+          "Is",
+          "Maxime"
+        ]
+      },
+      "expected": {
+        "again_me": "Ok",
+        "string_array": [
+          "Hello",
+          "My",
+          "Name",
+          "Is",
+          "Maxime"
+        ]
+      }
+    },
+    "obj4": {
+      "value": [
+        {
+          "anArrayOfObjectTest": "toto"
+        },
+        {
+          "withTwoElem": "ok"
+        }
+      ],
+      "expected": [
+        {
+          "an_array_of_object_test": "toto"
+        },
+        {
+          "with_two_elem": "ok"
+        }
+      ]
+    },
+    "obj5": {
+      "value": [ "ArrayP", "of", "string"],
+      "expected": [ "ArrayP", "of", "string"]
+    },
+    "obj6": {
+      "value": {
+        "finalTest": "Hola",
+        "LongArray": [
+          {
+            "SecondLevel": [
+              {
+                "LastLever": "ok?"
+              }
+            ]
+          }
+        ]
+      },
+      "expected": {
+        "final_test": "Hola",
+        "long_array": [
+          {
+            "second_level": [
+              {
+                "last_lever": "ok?"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "obj7": {
+      "value": {
+        "ThisIsAnObject": {
+          "ThisIsAnotherOne": {
+            "TheFinalOne": "ok?",
+            "Ok ok": "end"
+          },
+          "WithSomeProp": "ok"
+        }
+      },
+      "expected": {
+        "this_is_an_object": {
+          "this_is_another_one": {
+            "the_final_one": "ok?",
+            "ok_ok": "end"
+          },
+          "with_some_prop": "ok"
+        }
+      }
+    }
+  }
+}
