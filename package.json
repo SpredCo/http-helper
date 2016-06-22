@@ -1,0 +1,31 @@
+{
+  "name": "sharemyscreen-http-common",
+  "version": "0.0.0",
+  "description": "Utility library for rest modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharemyscreen/http-common.git"
+  },
+  "author": "ShareMyScreen Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharemyscreen/http-common/issues"
+  },
+  "homepage": "https://github.com/sharemyscreen/http-common#readme",
+  "dependencies": {
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.13.1",
+    "eslint-config-standard": "^5.3.1",
+    "eslint-plugin-promise": "^1.3.2",
+    "eslint-plugin-standard": "^1.3.2",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0"
+  }
+}
