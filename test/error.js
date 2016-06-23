@@ -28,6 +28,15 @@ it('clientExist()', function () {
   expect(result.message).to.equal('Client exists');
 });
 
+it('userExist()', function () {
+  const result = httpError.userExist();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(403);
+  expect(result.code).to.equal(2);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('User exists (email address already in use)');
+});
+
 it('internalServerError()', function () {
   const result = httpError.internalServerError({ error: 'Test error' });
   expect(result).to.not.be.null;
