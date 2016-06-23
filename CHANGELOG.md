@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.1
+
+* Client ready
+
+*guedj_m, Thu Jun 23 2016 14:26:18 GMT+0200 (CEST)*
+
+---
 ## 0.4.0
 
 * sendReply() handle error as second parameter
