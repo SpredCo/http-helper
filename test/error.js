@@ -19,6 +19,25 @@ it('invalidRequestError()', function () {
   expect(result.message).to.equal('Invalid request');
 });
 
+it('invalidGoogleToken()', function () {
+  const result = httpError.invalidGoogleToken();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(2);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Invalid google token');
+});
+
+it('invalidFacebookToken()', function () {
+  const result = httpError.invalidFacebookToken();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Invalid facebook token');
+});
+
+
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
