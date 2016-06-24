@@ -37,7 +37,6 @@ it('invalidFacebookToken()', function () {
   expect(result.message).to.equal('Invalid facebook token');
 });
 
-
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
