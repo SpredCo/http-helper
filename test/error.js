@@ -37,6 +37,15 @@ it('invalidFacebookToken()', function () {
   expect(result.message).to.equal('Invalid facebook token');
 });
 
+it('invalidUpdate()', function () {
+  const result = httpError.invalidUpdate();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(4);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('You cannot update email with a external api registration');
+});
+
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
@@ -53,6 +62,15 @@ it('userExist()', function () {
   expect(result.code).to.equal(2);
   expect(result.subCode).to.equal(1);
   expect(result.message).to.equal('User exists (email address already in use)');
+});
+
+it('userNotFound()', function () {
+  const result = httpError.userNotFound();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(404);
+  expect(result.code).to.equal(2);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Unable to find user');
 });
 
 it('internalServerError()', function () {
