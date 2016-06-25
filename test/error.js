@@ -46,6 +46,15 @@ it('invalidUpdate()', function () {
   expect(result.message).to.equal('You cannot update email with a external api registration');
 });
 
+it('unauthorizedUpdate()', function () {
+  const result = httpError.unauthorizedUpdate();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(401);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('You only organization owner can perform this action');
+});
+
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
@@ -71,6 +80,15 @@ it('userNotFound()', function () {
   expect(result.code).to.equal(2);
   expect(result.subCode).to.equal(1);
   expect(result.message).to.equal('Unable to find user');
+});
+
+it('organizationNotFound()', function () {
+  const result = httpError.organizationNotFound();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(404);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Unable to find organization');
 });
 
 it('internalServerError()', function () {
