@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0
+
+* First major release
+
+*guedj_m, Sat Jun 25 2016 15:59:22 GMT+0200 (CEST)*
+
+---
 ## 0.4.1
 
 * Client ready
