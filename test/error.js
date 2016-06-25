@@ -52,7 +52,7 @@ it('unauthorizedUpdate()', function () {
   expect(result.httpCode).to.equal(401);
   expect(result.code).to.equal(3);
   expect(result.subCode).to.equal(1);
-  expect(result.message).to.equal('You only organization owner can perform this action');
+  expect(result.message).to.equal('Only organization owner can perform this action');
 });
 
 it('clientExist()', function () {
