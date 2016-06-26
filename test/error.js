@@ -73,6 +73,15 @@ it('unauthorizedOrganizationAction()', function () {
   expect(result.message).to.equal('Only organization owner can perform this action');
 });
 
+it('unauthorizedOrganizationDisplay()', function () {
+  const result = httpError.unauthorizedOrganizationDisplay();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(401);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(2);
+  expect(result.message).to.equal('Only organization members can perform this action');
+});
+
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
