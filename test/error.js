@@ -64,6 +64,15 @@ it('userNotMember()', function () {
   expect(result.message).to.equal('User not member of the organization');
 });
 
+it('kickOwnerError()', function () {
+  const result = httpError.kickOwnerError();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(3);
+  expect(result.message).to.equal('Owner cannot kick himself from organization');
+});
+
 it('unauthorizedOrganizationAction()', function () {
   const result = httpError.unauthorizedOrganizationAction();
   expect(result).to.not.be.null;
