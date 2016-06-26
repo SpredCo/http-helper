@@ -46,8 +46,26 @@ it('invalidUpdate()', function () {
   expect(result.message).to.equal('You cannot update email with a external api registration');
 });
 
-it('unauthorizedUpdate()', function () {
-  const result = httpError.unauthorizedUpdate();
+it('userAlreadyMember()', function () {
+  const result = httpError.userAlreadyMember();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('User already member of the organization');
+});
+
+it('userNotMember()', function () {
+  const result = httpError.userNotMember();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(2);
+  expect(result.message).to.equal('User not member of the organization');
+});
+
+it('unauthorizedOrganizationAction()', function () {
+  const result = httpError.unauthorizedOrganizationAction();
   expect(result).to.not.be.null;
   expect(result.httpCode).to.equal(401);
   expect(result.code).to.equal(3);
