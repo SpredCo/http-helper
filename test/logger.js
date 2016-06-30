@@ -58,9 +58,6 @@ it('Should return an middleware', function (done) {
   const middle = helper.requestLogger('login');
   const fakeReq = {
     originalUrl: '/logger',
-    user: {
-      name: 'Test logger'
-    },
     get: function (headerName) {
       return 'Basic ' + headerName;
     }
