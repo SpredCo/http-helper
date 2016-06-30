@@ -7,4 +7,8 @@ describe('Testing sharemyscreen-httpcommon library', function () {
   describe('Testing errors', function () {
     require('./error');
   });
+
+  describe('Testing logger', function () {
+    require('./logger');
+  });
 });
