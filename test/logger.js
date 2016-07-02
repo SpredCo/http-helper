@@ -8,6 +8,7 @@ it('Should return an middleware', function (done) {
     user: {
       name: 'Test logger'
     },
+    method: 'GET',
     get: function (headerName) {
       return 'Basic ' + headerName;
     }
@@ -30,13 +31,13 @@ it('Should return an middleware', function (done) {
   const fakeReq = {
     url: '/logger',
     user: {
-
     },
     authInfo: {
       client: {
         name: 'Test logger'
       }
     },
+    method: 'POST',
     get: function (headerName) {
       return 'Basic ' + headerName;
     }
@@ -60,7 +61,8 @@ it('Should return an middleware', function (done) {
     originalUrl: '/logger',
     get: function (headerName) {
       return 'Basic ' + headerName;
-    }
+    },
+    method: 'PATCH'
   };
   const fakeRes = {
     statusCode: 400,
@@ -82,6 +84,7 @@ it('Should return an middleware', function (done) {
     user: {
       name: 'Test logger'
     },
+    method: 'DELETE',
     get: function (headerName) {
       return 'Basic ' + headerName;
     }
