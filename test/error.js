@@ -127,6 +127,15 @@ it('organizationNotFound()', function () {
   expect(result.message).to.equal('Unable to find organization');
 });
 
+it('roomNotFound()', function () {
+  const result = httpError.roomNotFound();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(404);
+  expect(result.code).to.equal(4);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Unable to find room');
+});
+
 it('internalServerError()', function () {
   const result = httpError.internalServerError({ error: 'Test error' });
   expect(result).to.not.be.null;
