@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1
+
+* Add roomNotFoundError
+
+*guedj_m, Sun Jul 03 2016 22:13:33 GMT+0200 (CEST)*
+
+---
 ## 1.0.0
 
 * First major release
