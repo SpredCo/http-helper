@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0
+
+* Clean project for spred use
+
+*guedj_m, Thu Aug 11 2016 13:25:11 GMT+0200 (CEST)*
+
+---
 ## 1.0.1
 
 * Add roomNotFoundError

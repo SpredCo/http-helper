@@ -1,6 +1,6 @@
 {
   "name": "spred-http-helper",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Utility library for rest services",
   "main": "index.js",
   "scripts": {
