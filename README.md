@@ -1,2 +1,2 @@
-# http-common
-Utility library for rest modules
+# http-helper
+Utility library for rest services
