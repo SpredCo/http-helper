@@ -1,6 +1,6 @@
 {
   "name": "sharemyscreen-http-helper",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "description": "Utility library for rest modules",
   "main": "index.js",
   "scripts": {
