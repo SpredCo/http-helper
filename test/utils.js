@@ -76,7 +76,7 @@ describe('sendReply()', function () {
     };
     res.json = function (obj) {
       expect(obj).to.not.be.undefined;
-      expect(obj.code).to.equal(1);
+      expect(obj.code).to.be.undefined;
       expect(obj.sub_code).to.be.undefined;
       expect(obj.message).to.equal('Invalid request');
       expect(res.st).to.equal(400);

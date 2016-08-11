@@ -1,7 +1,7 @@
 {
-  "name": "sharemyscreen-http-helper",
+  "name": "spred-http-helper",
   "version": "0.0.0",
-  "description": "Utility library for rest modules",
+  "description": "Utility library for rest services",
   "main": "index.js",
   "scripts": {
     "preversion": "gulp lint && npm test",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sharemyscreen/http-common.git"
+    "url": "git+https://github.com/spredco/http-helper.git"
   },
-  "author": "ShareMyScreen Team",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sharemyscreen/http-common/issues"
+    "url": "https://github.com/spredco/http-helper.git/issues"
   },
-  "homepage": "https://github.com/sharemyscreen/http-common#readme",
+  "homepage": "https://github.com/spredco/http-helper#readme",
   "dependencies": {
     "chalk": "^1.1.3",
     "change-case": "^3.0.0",
