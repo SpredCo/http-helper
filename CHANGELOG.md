@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+* Fix issue with sendReply
+
+*guedj_m, Thu Aug 18 2016 14:42:55 GMT+0200 (CEST)*
+
+---
 ## 0.1.0
 
 * Clean project for spred use
