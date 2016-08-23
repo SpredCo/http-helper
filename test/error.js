@@ -26,6 +26,15 @@ it('invalidFacebookToken()', function () {
   expect(result.message).to.equal('Invalid facebook token');
 });
 
+it('invalidUserUpdate()', function () {
+  const result = httpError.invalidUserUpdate();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(2);
+  expect(result.subCode).to.equal(3);
+  expect(result.message).to.equal('Impossible to update email address with an external api login');
+});
+
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
