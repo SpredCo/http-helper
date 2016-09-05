@@ -53,6 +53,15 @@ it('userExist()', function () {
   expect(result.message).to.equal('User exists (email address already in use)');
 });
 
+it('pseudoExist()', function () {
+  const result = httpError.pseudoExist();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(403);
+  expect(result.code).to.equal(2);
+  expect(result.subCode).to.equal(2);
+  expect(result.message).to.equal('User exists (pseudo already in use)');
+});
+
 it('userNotFound()', function () {
   const result = httpError.userNotFound();
   expect(result).to.not.be.null;
