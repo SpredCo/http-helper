@@ -35,6 +35,24 @@ it('invalidUserUpdate()', function () {
   expect(result.message).to.equal('Impossible to update email address with an external api login');
 });
 
+it('alreadyFollowing()', function () {
+  const result = httpError.alreadyFollowing();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(2);
+  expect(result.subCode).to.equal(4);
+  expect(result.message).to.equal('Already following this user');
+});
+
+it('notFollowing()', function () {
+  const result = httpError.notFollowing();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(2);
+  expect(result.subCode).to.equal(5);
+  expect(result.message).to.equal('Not following this user');
+});
+
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
