@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.3
+
+* Add following errors
+
+*guedj_m, Mon Sep 05 2016 18:05:15 GMT+0200 (CEST)*
+
+---
 ## 0.1.1
 
 * Fix issue with sendReply
