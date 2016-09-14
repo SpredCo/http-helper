@@ -5,6 +5,7 @@ it('invalidRequestError()', function () {
   const result = httpError.invalidRequestError();
   expect(result).to.not.be.null;
   expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(1);
   expect(result.message).to.equal('Invalid request');
 });
 
