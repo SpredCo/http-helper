@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0
+
+* Add some errors for inbox
+
+*guedj_m, Sun Sep 25 2016 12:11:40 GMT+0200 (CEST)*
+
+---
 ## 0.1.3
 
 * Add following errors

@@ -5,6 +5,7 @@ it('invalidRequestError()', function () {
   const result = httpError.invalidRequestError();
   expect(result).to.not.be.null;
   expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(1);
   expect(result.message).to.equal('Invalid request');
 });
 
@@ -33,6 +34,15 @@ it('invalidUserUpdate()', function () {
   expect(result.code).to.equal(2);
   expect(result.subCode).to.equal(3);
   expect(result.message).to.equal('Impossible to update email address with an external api login');
+});
+
+it('cannotReply()', function () {
+  const result = httpError.cannotReply();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Cannot reply to this conversation');
 });
 
 it('alreadyFollowing()', function () {
@@ -78,6 +88,33 @@ it('pseudoExist()', function () {
   expect(result.code).to.equal(2);
   expect(result.subCode).to.equal(2);
   expect(result.message).to.equal('User exists (pseudo already in use)');
+});
+
+it('userNotFound()', function () {
+  const result = httpError.userNotFound();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(404);
+  expect(result.code).to.equal(2);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Unable to find user');
+});
+
+it('conversationNotFound()', function () {
+  const result = httpError.conversationNotFound();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(404);
+  expect(result.code).to.equal(3);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Unable to find conversation');
+});
+
+it('messageNotFound()', function () {
+  const result = httpError.messageNotFound();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(404);
+  expect(result.code).to.equal(4);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Unable to find message');
 });
 
 it('userNotFound()', function () {
