@@ -144,7 +144,6 @@ it('castNotFound()', function () {
   expect(result.message).to.equal('Unable to find cast');
 });
 
-
 it('internalServerError()', function () {
   const result = httpError.internalServerError({ error: 'Test error' });
   expect(result).to.not.be.null;
