@@ -135,6 +135,16 @@ it('userNotFound()', function () {
   expect(result.message).to.equal('Unable to find user');
 });
 
+it('castNotFound()', function () {
+  const result = httpError.castNotFound();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(404);
+  expect(result.code).to.equal(5);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Unable to find cast');
+});
+
+
 it('internalServerError()', function () {
   const result = httpError.internalServerError({ error: 'Test error' });
   expect(result).to.not.be.null;
