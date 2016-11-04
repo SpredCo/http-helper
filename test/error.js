@@ -90,6 +90,15 @@ it('pseudoExist()', function () {
   expect(result.message).to.equal('User exists (pseudo already in use)');
 });
 
+it('castAuthorizationRefused()', function () {
+  const result = httpError.castAuthorizationRefused();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(403);
+  expect(result.code).to.equal(5);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Authorization refused');
+});
+
 it('userNotFound()', function () {
   const result = httpError.userNotFound();
   expect(result).to.not.be.null;
