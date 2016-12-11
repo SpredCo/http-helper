@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.2
+
+* Add tag not found error
+
+*guedjm, Sun Dec 11 2016 22:28:17 GMT+0100 (CET)*
+
+---
 ## 0.2.0
 
 * Add some errors for inbox
