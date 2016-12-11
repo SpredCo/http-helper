@@ -9,6 +9,15 @@ it('invalidRequestError()', function () {
   expect(result.message).to.equal('Invalid request');
 });
 
+it('invalidFileType()', function () {
+  const result = httpError.invalidFileType();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(1);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Invalid file type');
+});
+
 it('invalidGoogleToken()', function () {
   const result = httpError.invalidGoogleToken();
   expect(result).to.not.be.null;
