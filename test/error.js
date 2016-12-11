@@ -144,6 +144,15 @@ it('castNotFound()', function () {
   expect(result.message).to.equal('Unable to find cast');
 });
 
+it('tagNotFound()', function () {
+  const result = httpError.tagNotFound();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(404);
+  expect(result.code).to.equal(6);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Unable to find tag');
+});
+
 it('internalServerError()', function () {
   const result = httpError.internalServerError({ error: 'Test error' });
   expect(result).to.not.be.null;
