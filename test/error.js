@@ -54,6 +54,15 @@ it('cannotReply()', function () {
   expect(result.message).to.equal('Cannot reply to this conversation');
 });
 
+it('notCastCreator()', function () {
+  const result = httpError.notCastCreator();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(5);
+  expect(result.subCode).to.equal(3);
+  expect(result.message).to.equal('Not the cast creator');
+});
+
 it('alreadyFollowing()', function () {
   const result = httpError.alreadyFollowing();
   expect(result).to.not.be.null;
