@@ -72,6 +72,24 @@ it('notFollowing()', function () {
   expect(result.message).to.equal('Not following this user');
 });
 
+it('alreadyReminded()', function () {
+  const result = httpError.alreadyReminded();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(7);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Already reminded for this cast');
+});
+
+it('notReminded()', function () {
+  const result = httpError.notReminded();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(7);
+  expect(result.subCode).to.equal(2);
+  expect(result.message).to.equal('Not reminded for this cast');
+});
+
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
