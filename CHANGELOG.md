@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0
+
+* Add spredcastReminder errors
+
+*guedjm, Fri Dec 16 2016 19:31:52 GMT+0100 (CET)*
+
+---
 ## 0.3.2
 
 * Add tag not found error
