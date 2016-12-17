@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0
+
+* Add subscribtion related errors
+
+*guedjm, Sat Dec 17 2016 12:49:36 GMT+0100 (CET)*
+
+---
 ## 0.4.0
 
 * Add spredcastReminder errors
