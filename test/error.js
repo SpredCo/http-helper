@@ -99,6 +99,24 @@ it('notReminded()', function () {
   expect(result.message).to.equal('Not reminded for this cast');
 });
 
+it('alreadySubscribed()', function () {
+  const result = httpError.alreadySubscribed();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(8);
+  expect(result.subCode).to.equal(1);
+  expect(result.message).to.equal('Already subscribed to this tag');
+});
+
+it('notSubscribed()', function () {
+  const result = httpError.notSubscribed();
+  expect(result).to.not.be.null;
+  expect(result.httpCode).to.equal(400);
+  expect(result.code).to.equal(8);
+  expect(result.subCode).to.equal(2);
+  expect(result.message).to.equal('Not subscribed to this tag');
+});
+
 it('clientExist()', function () {
   const result = httpError.clientExist();
   expect(result).to.not.be.null;
